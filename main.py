@@ -73,7 +73,10 @@ def run_gui(model_path: str = None) -> None:
         print(f"导入前端模块失败: {str(e)}")
         print("请确保所有依赖已正确安装")
     except Exception as e:
+        import traceback
         print(f"应用运行过程中出现错误: {str(e)}")
+        print("错误堆栈:")
+        traceback.print_exc()
 
 
 def main() -> None:
